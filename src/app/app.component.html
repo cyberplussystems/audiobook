@@ -1,0 +1,23 @@
+
+
+<mat-sidenav-container class="example-container" *ngIf="shouldRun">
+
+
+	<mat-sidenav #sidenav mode="side" [(opened)]="opened" (opened)="events.push('open!')" (closed)="events.push('close!')">
+		Sidenav content
+	</mat-sidenav>
+
+	<mat-sidenav-content>
+
+  		<mat-toolbar color="primary">
+			<mat-toolbar-row>
+				<mat-icon class="example-icon" (click)="sidenav.toggle()" aria-hidden="false" aria-label="Example reaorder icon">reorder</mat-icon>
+				<span>{{title}}</span>
+		    <span class="example-spacer"></span>
+		    <mat-icon class="example-icon" aria-hidden="false" aria-label="Example settings icon">settings</mat-icon>
+		    <mat-icon class="example-icon" aria-hidden="false" aria-label="Example exit_to_app icon">logout</mat-icon>
+		  </mat-toolbar-row>
+		</mat-toolbar>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>
